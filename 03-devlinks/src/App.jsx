@@ -10,10 +10,7 @@ return (
 
     <Perfil />
 
-      <div className='perfil'>
-        <img src="https://placehold.co/200x200" alt="" />
-        <p>@Seu nome</p>
-      </div>
+
       <div className='switch'>
         botão switch
       </div>
