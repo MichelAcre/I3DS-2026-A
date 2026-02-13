@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { Component } from 'react'
+import Style from "./Link.module.css"
 
     const Link = ({url, children }) => {
     return (

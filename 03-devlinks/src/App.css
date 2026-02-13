@@ -1,27 +1,74 @@
-:root{
-    --bg-url: url(assets/bg-desktop-light.jpg);/*Pega uma imagem para usar de fundo*/
-    --text-color: #000; /*Muda a cor do texto*/
-    ---stroke-color: rgba(0, 0, 0, 0.5); /*Muda a cor da borda*/
-    ---surface-color: rgba(0, 0, 0, 0.1); /*Muda a cor de alguma superfície*/
-    ---surface-color-hover: rgba(0, 0, 0, 0.4); /*Muda a cor da superfície enquanto o mouse está em cima*/
-    --switch-bf-url: url(assets/Sun.svg); /*Muda a imagem especificada*/
-    --highlight-color: rgba(0, 0, 0, 0.2); /*Muda a cor do grifado*/
-
+:root {
+  --bg-url: url(assets/bg-desktop-light.jpg); /*Pega uma imagem para usar de fundo*/
+  --text-color: #000; /*Muda a cor do texto*/
+  --stroke-color: rgba(0, 0, 0, 0.5); /*Muda a cor da borda*/
+  --surface-color: rgba(0, 0, 0, 0.1); /*Muda a cor de alguma superfície*/
+  --surface-color-hover: rgba(
+    0,
+    0,
+    0,
+    0.4
+  ); /*Muda a cor da superfície enquanto o mouse está em cima*/
+  --switch-bg-url: url(assets/Sun.svg); /*Muda a imagem especificada*/
+  --highlight-color: rgba(0, 0, 0, 0.2); /*Muda a cor do grifado*/
 }
 
-#App{ /* Para aplicar as variaveis criadas ao app */
-    height: 100vh; /* Faz a altura ser 100% da tela */
-    background-image: var(--bg-url); /* Coloca a imagem que foi selecionada dentro da variavel --bg-url */
-    background-repeat: no-repeat; /* Não repete o background */
-    background-position: top center; /* Coloca a posição do background ligada ao meio e ao topo, para que ela fique centralizada */
-    background-size: cover; /* Faz com que a imagem preencha todo o Container */
-    color: var(--text-color); /* Aplica a cor de texto mencionada anteriormente */
+.light {
+      --bg-url: url(assets/bg-desktop.jpg); /*Pega uma imagem para usar de fundo*/
+  --text-color: #fff; /*Muda a cor do texto*/
+  --stroke-color: rgba(255, 255, 255, 0.5); /*Muda a cor da borda*/
+  --surface-color: rgba(255, 255, 255, 0.1); /*Muda a cor de alguma superfície*/
+  --surface-color-hover: rgba(
+    255,
+    255,
+    255,
+    0.4
+  ); /*Muda a cor da superfície enquanto o mouse está em cima*/
+  --switch-bg-url: url(assets/MoonStars.svg); /*Muda a imagem especificada*/
+  --highlight-color: rgba(255, 255, 255, 0.2); /*Muda a cor do grifado*/
+}
+#App {
+  /* Para aplicar as variaveis criadas ao app */
+
+  font-family: "Inter" sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  height: 100vh; /* Faz a altura ser 100% da tela */
+  background-image: var(
+    --bg-url
+  ); /* Coloca a imagem que foi selecionada dentro da variavel --bg-url */
+  background-repeat: no-repeat; /* Não repete o background */
+  background-position: top center; /* Coloca a posição do background ligada ao meio e ao topo, para que ela fique centralizada */
+  background-size: cover; /* Faz com que a imagem preencha todo o Container */
+  color: var(--text-color); /* Aplica a cor de texto mencionada anteriormente */
+  gap: 20px;
+
+  transition: background 0.2s
 }
 
-ul{
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    padding: 24px;
+#Link {
+  display: flex;
+  justify-content: center;
+  
+  & ul {
+    width: 100%;
+    max-width: 588px;
+    list-style: none; /* Remove os marcadores padrão da lista */
+    display: flex; /* Define o layout como flexível */
+    flex-direction: column; /* Organiza os itens da lista em uma coluna */
+    gap: 16px; /* Define um espaço de 16px entre os itens da lista */
+    padding: 24px; /* Adiciona um preenchimento de 24px ao redor da lista */
+  }
+}
+#SocialLinks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  & a {
+    color: var(--text-color);
+    font-size: x-large;
+  }
 }
