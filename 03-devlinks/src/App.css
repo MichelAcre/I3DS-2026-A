@@ -1,0 +1,27 @@
+:root{
+    --bg-url: url(assets/bg-desktop-light.jpg);/*Pega uma imagem para usar de fundo*/
+    --text-color: #000; /*Muda a cor do texto*/
+    ---stroke-color: rgba(0, 0, 0, 0.5); /*Muda a cor da borda*/
+    ---surface-color: rgba(0, 0, 0, 0.1); /*Muda a cor de alguma superfície*/
+    ---surface-color-hover: rgba(0, 0, 0, 0.4); /*Muda a cor da superfície enquanto o mouse está em cima*/
+    --switch-bf-url: url(assets/Sun.svg); /*Muda a imagem especificada*/
+    --highlight-color: rgba(0, 0, 0, 0.2); /*Muda a cor do grifado*/
+
+}
+
+#App{ /* Para aplicar as variaveis criadas ao app */
+    height: 100vh; /* Faz a altura ser 100% da tela */
+    background-image: var(--bg-url); /* Coloca a imagem que foi selecionada dentro da variavel --bg-url */
+    background-repeat: no-repeat; /* Não repete o background */
+    background-position: top center; /* Coloca a posição do background ligada ao meio e ao topo, para que ela fique centralizada */
+    background-size: cover; /* Faz com que a imagem preencha todo o Container */
+    color: var(--text-color); /* Aplica a cor de texto mencionada anteriormente */
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 24px;
+}
