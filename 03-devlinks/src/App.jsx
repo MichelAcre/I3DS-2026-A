@@ -31,7 +31,7 @@ return (
         <SocialLink url={"https://discord.com"} icon={"logo-discord"}></SocialLink>
         <SocialLink url={"https://youtube.com"} icon={"logo-youtube"}></SocialLink>
 
-        <Rodape>ProfCastello</Rodape>    
+        <Rodape>MichelAcre</Rodape>    
     </div>
   )
 }
