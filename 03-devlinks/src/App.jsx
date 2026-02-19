@@ -5,6 +5,7 @@ import Perfil from "./components/Perfil/Perfil";
 import Rodape from "./components/Rodape/Rodape";
 import SocialLink from "./components/SocialLink/SocialLink";
 import Switch from "./components/Switch/Switch";
+import foto from "./assets/michael.jpg"
 
 function App() {
   const[isLight,setIsLight] = useState(true)
@@ -15,7 +16,7 @@ function App() {
 
   return (
     <div id="App" className={isLight ? "light" : ""}>
-      <Perfil fotoPerfil={"https://placehold.co/100"}>Gustavo Castello</Perfil>
+      <Perfil fotoPerfil={foto}>Michel Acre</Perfil>
 
       <Switch troca={troca} isLight={isLight} /> 
       <div id="Link">
@@ -29,19 +30,19 @@ function App() {
 
       <div id="SocialLinks">
         <SocialLink
-          url={"htdtps://github.com"}
+          url={"https://github.com/MichelAcre"}
           icon={"logo-github"}
         ></SocialLink>
         <SocialLink
-          url={"https://instagram.com"}
+          url={"https://www.instagram.com/mich_z5/"}
           icon={"logo-instagram"}
         ></SocialLink>
         <SocialLink
-          url={"https://discord.com"}
-          icon={"logo-discord"}
+          url={"https://www.linkedin.com/in/michel-acre-a452a43b2/"}
+          icon={"logo-linkedin"}
         ></SocialLink>
         <SocialLink
-          url={"https://youtube.com"}
+          url={"https://www.youtube.com/@michel_z535"}
           icon={"logo-youtube"}
         ></SocialLink>
       </div>
