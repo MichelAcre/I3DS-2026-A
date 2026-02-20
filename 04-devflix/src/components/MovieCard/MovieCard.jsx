@@ -1,23 +1,36 @@
-import styles from "./MovieCard.module.css"
+import { useState } from "react";
+import styles from "./MovieCard.module.css";
+import MovieDescription from "../MovieDescription/MovieDescription";
 
 const MovieCard = (props) => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  // console.log(isModalOpen);
+
+  const toggleModal = () => {
+    setIsModalOpen(!isModalOpen);
+  };
+
   return (
     <>
-    <div className={styles.movie}>
+      <div className={styles.movie} onClick={toggleModal}>
         <div>
-            <p>{props.Year}</p>
+          <p>{props.Year}</p>
         </div>
-      
-      <div>
-        <img src={props.Poster} alt={props.Title} />
-      </div>
-      <div>
-        <span>{props.Type}</span>
-        <h3>{props.Title}</h3>
-      </div>
-    </div>
-    </>
-  )
-}
 
-export default MovieCard
+        <div>
+          <img src={props.Poster} alt={props.Title} />
+        </div>
+
+        <div>
+          <span>{props.Type}</span>
+          <h3>{props.Title}</h3>
+        </div>
+      </div>
+      {isModalOpen && (
+        <MovieDescription apiUrl={props.apiUrl} movieId={props.imdbID} click={toggleModal} />
+      )}
+    </>
+  );
+};
+
+export default MovieCard;
