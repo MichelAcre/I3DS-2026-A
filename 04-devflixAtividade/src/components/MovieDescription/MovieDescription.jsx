@@ -1,15 +1,22 @@
 import { useEffect, useState } from "react";
 import styles from "./MovieDescription.module.css";
+import LanguageDropdown from "../LanguageDropdown/LanguageDropdown";
 
 const MovieDescription = (props) => {
   const [movieDesc, setMovieDesc] = useState([]);
+  const [plotText, setPlotText] = useState("");
+  const [originalPlot, setOriginalPlot] = useState("");
 
   useEffect(() => {
     fetch(`${props.apiUrl}&i=${props.movieID}`)
       .then((response) => response.json())
-      .then((data) => setMovieDesc(data))
+      .then((data) => {
+        setMovieDesc(data);
+        setOriginalPlot(data.Plot);
+        setPlotText(data.Plot);
+      })
       .catch((error) => console.error(error));
-  }, []);
+  }, [props.apiUrl, props.movieID]);
 
   return (
     <div className={styles.modalBackdrop} onClick={props.click}>
@@ -22,8 +29,8 @@ const MovieDescription = (props) => {
           </button>
 
           <div className={styles.movieType}>
-            <div>
-              <img src="/favicon.png" alt="" />
+            <div className={styles.TitleBg}>
+              <img className={styles.icond} src="/IconDroyd.png" alt="" />
               {movieDesc.Type}
               <h1>{movieDesc.Title}</h1>
               <a
@@ -35,6 +42,9 @@ const MovieDescription = (props) => {
             </div>
           </div>
         </div>
+
+        <div className={styles.line} />
+
         <div className={styles.containerMisc}>
           <div className={styles.containerFlex}>
             Avaliação: {movieDesc.imdbRating} | Duração: {movieDesc.Runtime} |{" "}
@@ -46,7 +56,11 @@ const MovieDescription = (props) => {
           </div>
         </div>
         <div className={styles.desc}>
-          <p>Sinopse: {movieDesc.Plot}</p>
+          <p>Sinopse: {plotText}</p>
+          <LanguageDropdown
+            originalText={originalPlot}
+            onTranslate={setPlotText}
+          />
         </div>
       </div>
     </div>

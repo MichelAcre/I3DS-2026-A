@@ -25,9 +25,18 @@ const MovieCard = (props) => {
           <span>{props.Type}</span>
           <h3>{props.Title}</h3>
         </div>
+        <img
+          className={styles.imgIco}
+          src="/IconDroyd.png"
+          alt="Ícone do aplicativo"
+        />
       </div>
       {isModalOpen && (
-        <MovieDescription apiUrl={props.apiUrl} movieID={props.imdbID} click={toggleModal} />
+        <MovieDescription
+          apiUrl={props.apiUrl}
+          movieID={props.imdbID}
+          click={toggleModal}
+        />
       )}
     </>
   );

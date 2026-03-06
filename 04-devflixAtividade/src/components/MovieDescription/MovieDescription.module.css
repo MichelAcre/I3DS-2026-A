@@ -16,6 +16,12 @@
   }
 }
 
+.line{
+  background-color: #000;
+  height: 2px;
+  width: 100%;
+}
+
 .movieModal {
   position: fixed;
   top: 50%;
@@ -30,6 +36,12 @@
   max-height: 100vh;
   animation: fadeIn 0.3s ease-in-out forwards;
   transition: all 0.3s ease;
+}
+
+.TitleBg {
+  padding: 10px;
+  background: var(--bg-primary);
+  border-radius: 10px;
 }
 
 .movieInfo {
@@ -109,11 +121,19 @@
 
 .containerFlex {
   flex: 1;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 1px;
 }
 
 .desc {
   padding: 0 2em 2em;
   text-align: justify;
+}
+
+.icond{
+  margin-right: 5px;
 }
 
 @media screen and (max-width: 768px) {
