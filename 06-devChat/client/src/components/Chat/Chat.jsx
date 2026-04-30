@@ -30,6 +30,8 @@ const Chat = (props) => {
   const handleSubmit = () => {
     const message = messageRef.current.value;
 
+    if (!props.socket) return null;
+
     if (!message.trim()) return;
 
     props.socket.emit("message", message);
