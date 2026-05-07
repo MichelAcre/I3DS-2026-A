@@ -1,0 +1,32 @@
+.SecundarioBg {
+    background-color: #2983AA;
+    height: 145px;
+    width: 860px;
+    display: flex;
+}
+
+.ImgSec {
+    height: 100%;
+    width: 30%;
+    object-fit: cover;
+    margin-right: 26px;
+}
+
+.Price {
+    font-size: 32px;
+    color: #BEEB14;
+    font-weight: bold;
+    margin-top: 45px;
+}
+
+.CartBtn {
+    font-weight: bold;
+    background-color: #549300;
+    padding: 10px 50px;
+    border-radius: 10px;
+    border-color: rgba(0, 0, 0, 0);
+    align-self: flex-end;
+    right: 0;
+    margin-bottom: 5px;
+    margin-left: 130px;
+}

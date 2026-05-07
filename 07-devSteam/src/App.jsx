@@ -1,17 +1,36 @@
-import './App.css'
-import Header from './components/Header/Header'
-import GameCard from './components/GameCard/GameCard'
+import "./App.css";
+import Header from "./components/Header/Header";
+import GameCard from "./components/GameCard/GameCard";
+import CardSecundario from "./components/CardSecundario/CardSecundario"
 
 const App = () => {
+  return (
+    <>
+      <Header />
+      <div className="App">
+        <div>
+          <h2 style={{ marginTop: "91px", fontFamily: "Inter" }}>PROMOÇÕES</h2>
+          <div className="Cards">
+            <GameCard />
+            <GameCard />
+            <GameCard />
+          </div>
+        </div>
 
-  return(
-    <div id="App">
-    <Header />
-    <h2 style={{marginTop: '199px'}}>PROMOÇÕES</h2>
-    <GameCard />
-    </div>
-  )
-}
-  
+        <div>
+          <h2 style={{ marginTop: "108px", fontFamily: "Inter" }}>
+            OUTROS JOGOS
+          </h2>
+          <div className="Secondary">
+        <CardSecundario />
+        <CardSecundario />
+        <CardSecundario />
+        <CardSecundario />
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
 
-export default App
+export default App;
