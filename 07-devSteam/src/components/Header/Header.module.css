@@ -1,0 +1,63 @@
+.HeaderTopo {
+display: flex;
+ position:fixed;
+ width: 100%;
+ background-color: #171A21;
+ align-items: center;
+ justify-content: space-between;
+ box-sizing: border-box;
+}
+
+.Devsteam {
+display: flex;
+align-items: center;
+gap:18px;
+}
+
+
+
+.Logo {
+    margin: 22px 0px 14px 94px;
+    max-width: 72px;
+    max-height: 72px;
+}
+
+.Logotext {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    line-height: 100%;
+    font-size: 32px;
+    margin: 0px;
+    letter-spacing: 0%;
+}
+
+.Search {
+    justify-content: center;
+    align-self: center;
+    background-color: #316282;
+    align-items: center;
+
+    margin: 32px 0px 36px 0px;
+    border-radius: 0;
+    border-color: rgba(0, 0, 0, 0);
+    width: 400px;
+    height: 40px;
+
+}
+
+.Search::placeholder {
+    font-family: 'Inter', sans-serif;
+    color: #C7C7C7;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    }
+
+.Carticone {
+    color: #fff;
+    height: 46px !important;
+    width: 46px !important;
+    margin: 29px 58px 33px 0px;
+}

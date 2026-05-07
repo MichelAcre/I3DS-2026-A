@@ -1,0 +1,12 @@
+.GameCard{
+    background: linear-gradient(90deg, #2B87AE 0%, #19587B 100%);
+    width: 250px;
+    height: 463px;
+    justify-content: center;
+    align-items: center;
+}
+
+.ImgGame{
+    height: 75%;
+    width: 100%;
+}
