@@ -1,0 +1,41 @@
+.SecundarioBg {
+  background-color: #2983aa;
+  min-height: 145px;
+  max-width: 860px;
+  width: 100%;
+  display: flex;
+}
+
+.ImgSec {
+  justify-self: start;
+  max-height: 145px;
+  height: 100%;
+  object-fit: cover;
+}
+
+.Price {
+  font-size: 32px;
+  color: #beeb14;
+  font-weight: bold;
+
+}
+
+.CartBtn {
+  font-weight: bold;
+  background-color: #549300;
+  border-radius: 10px;
+  border-color: rgba(0, 0, 0, 0);
+  cursor: pointer;
+  color: #fff;
+  margin: 0;
+}
+
+.UmNomeBonitinho {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-direction: column;
+    padding-bottom: 10px;
+    padding-right: 14px;
+    margin-left: 14px;
+}
