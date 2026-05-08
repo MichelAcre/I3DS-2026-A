@@ -6,6 +6,8 @@
   align-items: center;
   justify-content: space-between;
   box-sizing: border-box;
+  flex-wrap: wrap;
+  
 }
 
 .Devsteam {
@@ -15,9 +17,24 @@
 }
 
 .Logo {
-  margin: 22px 0px 14px 94px;
+  margin: 0px 0px 0px 94px;
   max-width: 72px;
   max-height: 72px;
+}
+
+@media (max-width: 768px) {
+  .Logo {
+      margin: 0px 0px 0px 25px;
+  }
+  .Devsteam {
+    order: 1;
+  }
+  .Search {
+    order: 3;
+  }
+  .Carticone {
+    order: 2;
+  }
 }
 
 .Logotext {
@@ -35,7 +52,7 @@
   background-color: #316282;
   align-items: center;
 
-  margin: 32px 0px 36px 0px;
+  margin: 16px 10px 36px 10px;
   border-radius: 0;
   border-color: rgba(0, 0, 0, 0);
   width: 400px;

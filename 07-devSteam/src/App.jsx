@@ -9,7 +9,7 @@ const App = () => {
       <Header />
       <div className="App">
         <div>
-          <h2 style={{ marginTop: "91px", fontFamily: "Inter" }}>PROMOÇÕES</h2>
+          <h2 className="TextDesconto">PROMOÇÕES</h2>
           <div className="Cards">
             <GameCard />
             <GameCard />
@@ -18,7 +18,7 @@ const App = () => {
         </div>
 
         <div>
-          <h2 style={{ marginTop: "108px", fontFamily: "Inter" }}>
+          <h2 style={{ marginTop: "108px"}}>
             OUTROS JOGOS
           </h2>
           <div className="Secondary">

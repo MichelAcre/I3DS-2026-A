@@ -13,10 +13,21 @@
   align-items: center;
   gap: 30px;
   margin: 0;
+  flex-wrap: wrap;
 }
 
 .Secondary{
   flex-direction: column;
   display: flex;
   gap: 20px;
+}
+
+.TextDesconto {
+  margin-top: 108px;
+}
+
+@media (max-width: 768px) {
+  .TextDesconto {
+    justify-self: center;
+  }
 }
