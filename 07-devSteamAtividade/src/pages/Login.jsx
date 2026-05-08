@@ -18,8 +18,9 @@ const Login = () => {
   };
 
   return (
-    <div className="container py-5 w-50">
+    <>
       <Header />
+    <div className="container py-5 w-50">
       <form onSubmit={handleLogin}>
         <div className="mb-3">
           <label className="form-label" htmlFor="frmNome">
@@ -32,7 +33,7 @@ const Login = () => {
             type="text"
             name="frmNome"
             id="frmNome"
-          />
+            />
         </div>
 
         <div className="mb-3">
@@ -46,13 +47,14 @@ const Login = () => {
             type="email"
             name="frmEmail"
             id="frmEmail"
-          />
+            />
         </div>
 
         <button className="btn btn-primary w-100">Entrar</button>
       </form>
-      <Rodape />
     </div>
+      <Rodape />
+            </>
   );
 };
 
